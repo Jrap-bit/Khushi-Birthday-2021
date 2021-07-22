@@ -110,7 +110,7 @@ body {
     }
   }
   
-@keyframes hide {
+@keyframes hide{
     to {
         opacity: 0;
         text-shadow: none;
