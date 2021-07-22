@@ -1,5 +1,5 @@
 body {
-    background: rgb(215, 224, 35);
+    background: #fbd67e;
 }
 .birthday {
     position: absolute;
@@ -141,6 +141,31 @@ body {
         left: -250px;
    }
 }
+ @-webkit-keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
 @keyframes cake {
     to {
         font-size: 28em;
@@ -157,6 +182,31 @@ body {
       transform: translateX(0);
     }
   }
+@-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
   
   @keyframes grow-left {
     from {
@@ -166,6 +216,31 @@ body {
       transform: scaleX(1);
     }
   }
+@-webkit-keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
 .final {
     position: absolute;
     font-size: 58px;
@@ -177,6 +252,9 @@ body {
 }
 .final span {
     display: block;
+}
+strong{
+    font-size: 2em;
 }
 .fa-birthday-cake {
     position: absolute;
@@ -220,22 +298,45 @@ a:hover {
     cursor:pointer;  
 }
 
+.msg{
+    display: box;
+    display: -moz-box;
+    display: -webkit-box;
+    font-family: 'Oswald', sans-serif;
+    left: 50px;
+    font-size: 2.6em;
+    margin: 40vh auto;
+    box-align: center;
+    color: #fff;
+    text-shadow: 4px 6px 6px rgba(0,0,0,0.29);
+    -webkit-animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 2s;
+}
+
+.center {
+    width: 32%;
+    padding: 20px;
+  }
+
 .button {
     font-family: 'Lato', sans-serif;
     font-size: 1.5em;
     flex: 1 1 auto;
     margin-top: 50vh;
-    margin-left: 160vh;
-    color: #FFF;
+    color: #333;
+    right: 80px;
     padding: 20px;
-    border: 2px solid #f7f7f7;
+    border: 3px solid #fff;
     text-align: center;
     text-transform: uppercase;
     position: absolute;
     overflow: hidden;
-    text-shadow: 4px 6px 6px rgba(0,0,0,0.29);
+    text-shadow: 4px 6px 6px rgba(0,0,0,0.18);
     transition: 0.3s;
-    animation: slide-in-fwd-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation-delay: 3s;
 }
 .button:after {
     position: absolute;
@@ -257,6 +358,7 @@ a:hover {
     cursor: pointer;
     background: #f7f7f7;
     color: #000;
+    text-shadow: none;
     
 }
 .button:hover:after {
