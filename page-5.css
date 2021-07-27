@@ -127,7 +127,7 @@ p {
 .glass {
     height: 55%;
     width: 100%;
-    background-image: url('Media/Pg-5.jpeg');
+    background-image: url('https://raw.githubusercontent.com/Jrap-bit/Khushi-Birthday-2021/main/Media/pg-5.jpeg');
     background-size: cover;
     background-position: center;
     clip-path: inset(10em);
