@@ -6,12 +6,12 @@ body {
 	background: #fbd67e; /*CAPE HONEY*/
 	margin: 0px;
 	padding: 0px;
+	overflow: hidden;
 }
 
 ::selection {
 	background: transparent;
 }
-
 h4 {
 	font-size: 26px;
 	line-height: 1px;
@@ -20,8 +20,6 @@ h4 {
 
 .color1{color:#1BBC9B; transform: rotate(-5deg);}/*MOUNTAIN MEADOW*/
 .color2{color:#C0392B; transform: rotate(-5deg);/*TALL POPPY*/}
-
-
 .card {
 	color: #013243; /*SHERPA BLUE*/
 	position: absolute;
@@ -134,14 +132,28 @@ h4 {
 .front-img{
 	border-radius: 2%;
 }
+.hover-txt{
+	font-family: 'Oswald', sans-serif;
+	position: absolute;
+	display: inline-flex;
+	font-weight: 100;
+	margin-top: 55vh;
+	font-size: 2em;
+	right: 200px;
+	color: #333;
+	text-shadow: 4px 6px 6px rgba(0,0,0,0.17);
+  }
+  .hover-txt p{
+	  right:200px;
+  }
 .button {
     font-family: 'Lato', sans-serif;
     font-size: 1.5em;
     flex: 1 1 auto;
-    margin-top: 45vh;
+    margin-top: 38vh;
     color: #333;
-    left: 155vh;
-    padding: 20px;
+    right: 200px;
+    padding: 30px;
     border: 3px solid #fff;
     text-align: center;
     text-transform: uppercase;
@@ -187,7 +199,16 @@ h4 {
     left: -10%;
     width: 120%;
 }
-
+@keyframes simple{
+	from{
+		opacity: 0;
+		transform: rotateX(-10deg) translate(-50%,-50%) perspective(px);
+	}
+	to{
+		opacity: 1;
+		transform: rotateX(0) translate(-50%,-50%) perspective(2000px);
+	}
+}
 @-webkit-keyframes tracking-in-expand {
     0% {
       letter-spacing: -0.5em;
@@ -212,6 +233,20 @@ h4 {
       opacity: 1;
     }
   }
+
+  @keyframes fade-in-left {
+	0% {
+	  -webkit-transform: translateX(-50%);
+			  transform: translateX(-50%);
+	  opacity: 0;
+	}
+	100% {
+		transform: translateX(0%) translateY(50%) perspective(2000px);
+	  opacity: 1;
+	}
+  }
+  
+  
 
 @-webkit-keyframes jello-horizontal {
 	0% {
@@ -278,3 +313,5 @@ h4 {
 	  text-decoration: none;
 	  color: inherit;
   }
+
+ 
