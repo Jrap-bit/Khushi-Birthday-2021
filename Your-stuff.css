@@ -105,7 +105,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  bottom: 16px;
+  bottom: -14px;
   left: 16px;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -142,7 +142,7 @@
   top: 100%;
   right: 30px;
   left: 30px;
-  bottom: 54px;
+  bottom: 4px;
   overflow: hidden;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -252,7 +252,7 @@
   z-index: 20;
 }
 .material-card.mc-active .mc-content {
-  padding-top: 5.6em;
+  padding-top: 4.6em;
 }
 @media screen and (max-width: 767px) {
   .material-card.mc-active .mc-content {
@@ -260,9 +260,13 @@
     margin-right: 16px;
   }
 }
+.button a{
+  text-decoration: none;
+  color: inherit;
+}
 .material-card.mc-active .mc-description {
-  top: 50px;
-  padding-top: 5.6em;
+  top: 40px;
+  padding-top: 4.6em;
   opacity: 1;
   filter: alpha(opacity=100);
 }
@@ -272,14 +276,14 @@
     top: auto;
     right: auto;
     left: auto;
-    padding: 50px 30px 70px 30px;
+    padding: 50px 30px 40px 30px;
     bottom: 0;
   }
 }
 .material-card.mc-active .mc-footer {
   overflow: visible;
   position: absolute;
-  top: calc(100% - 16px);
+  top: calc(100% + 10px);
   left: 16px;
   right: 0;
   height: 82px;
@@ -1262,6 +1266,11 @@ body {
 h1,
 h2,
 h3 {
+  font-weight: 200;
+}
+.container .page-header h1{
+  font-family: 'Oswald', sans-serif;
+  font-size: 4rem;
   font-weight: 200;
 }
 .button {
