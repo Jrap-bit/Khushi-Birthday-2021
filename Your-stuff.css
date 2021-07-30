@@ -161,6 +161,10 @@
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
+.mc-description a{
+  cursor: pointer;
+  font-weight: 600;
+}
 .material-card .mc-footer h4 {
   position: absolute;
   top: 200px;
